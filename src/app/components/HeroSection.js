@@ -1,9 +1,43 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 
+const phrases = [
+  "Infra Expert",
+  "Self Learn Programmer",
+  "Cyber Security Pentest"
+];
+
 const HeroSection = ({ isVisible, fadeInUp, scrollToSection }) => {
+  const [displayedText, setDisplayedText] = useState('');
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    if (phraseIndex >= phrases.length) {
+      setPhraseIndex(0);
+      setCharIndex(0);
+      setDisplayedText('');
+      return;
+    }
+
+    if (charIndex < phrases[phraseIndex].length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev + phrases[phraseIndex][charIndex]);
+        setCharIndex(charIndex + 1);
+      }, 150);
+      return () => clearTimeout(timeout);
+    } else {
+      const timeout = setTimeout(() => {
+        setDisplayedText('');
+        setCharIndex(0);
+        setPhraseIndex(phraseIndex + 1);
+      }, 1500);
+      return () => clearTimeout(timeout);
+    }
+  }, [charIndex, phraseIndex]);
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>
@@ -17,8 +51,9 @@ const HeroSection = ({ isVisible, fadeInUp, scrollToSection }) => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             Amir Zakwan
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Full Stack Developer & UI/UX Designer
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 h-8">
+            {displayedText}
+            <span className="border-r-2 border-gray-300 animate-pulse ml-1"></span>
           </p>
           <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
             Crafting digital experiences with modern technologies and creative design thinking

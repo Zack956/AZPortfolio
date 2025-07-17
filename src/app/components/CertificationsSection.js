@@ -1,45 +1,39 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Award } from 'lucide-react';
 
 const CertificationsSection = ({ isVisible, fadeInUp, staggerChildren }) => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   const certifications = [
     {
-      title: "AWS Certified Developer",
-      issuer: "Amazon Web Services",
-      date: "2024",
-      badge: "🏆"
+      title: "Microsoft Certified: Azure Security Engineer Associate",
+      issuer: "Microsoft",
+      date: "Renew by September 20, 2025",
+      badge: "🛡️",
+      image: "/cert/microsoft-certified-azure-security-engineer-associate.png"
     },
     {
-      title: "Google Cloud Professional",
-      issuer: "Google Cloud",
-      date: "2023",
-      badge: "☁️"
+      title: "Microsoft Certified: Azure Administrator Associate",
+      issuer: "Microsoft",
+      date: "Expires on June 5, 2026",
+      badge: "🔧",
+      image: "/cert/microsoft-certified-azure-administrator-associate.2.png"
     },
     {
-      title: "React Developer Certification",
-      issuer: "Meta",
-      date: "2023",
-      badge: "⚛️"
+      title: "Microsoft Certified: Azure Solutions Architect Expert",
+      issuer: "Microsoft",
+      date: "Expires on August 14, 2026",
+      badge: "🏗️",
+      image: "/cert/microsoft-certified-azure-solutions-architect-expert.1.png"
     },
     {
-      title: "JavaScript Algorithms",
-      issuer: "FreeCodeCamp",
-      date: "2022",
-      badge: "📜"
-    },
-    {
-      title: "UI/UX Design Certification",
-      issuer: "Adobe",
-      date: "2022",
-      badge: "🎨"
-    },
-    {
-      title: "Node.js Certification",
-      issuer: "OpenJS Foundation",
-      date: "2022",
-      badge: "🟢"
+      title: "CCNA Certification",
+      issuer: "Cisco",
+      date: "Date not specified",
+      badge: "🌐",
+      image: "/cert/CCNA.jpg"
     }
   ];
 
@@ -56,7 +50,9 @@ const CertificationsSection = ({ isVisible, fadeInUp, staggerChildren }) => {
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className={`${staggerChildren('certifications', index * 100)} bg-gray-900/50 p-6 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 group`}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              className={`${staggerChildren('certifications', index * 100)} relative bg-gray-900/50 p-6 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 group cursor-pointer`}
             >
               <div className="flex items-center mb-4">
                 <div className="text-3xl mr-4">{cert.badge}</div>
@@ -71,6 +67,13 @@ const CertificationsSection = ({ isVisible, fadeInUp, staggerChildren }) => {
                 <span className="text-blue-400 font-semibold">{cert.date}</span>
                 <Award className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors duration-300" />
               </div>
+              {hoveredIndex === index && (
+                <img
+                  src={cert.image}
+                  alt={`${cert.title} certificate`}
+                  className="absolute top-0 left-0 w-full h-full object-contain rounded-2xl bg-gray-900 bg-opacity-90 z-10"
+                />
+              )}
             </div>
           ))}
         </div>

@@ -17,9 +17,11 @@ const AboutSection = ({ isVisible, fadeInUp, fadeInLeft, fadeInRight }) => {
           <div className={fadeInLeft('about')}>
             <div className="relative">
               <div className="w-80 h-80 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl overflow-hidden">
-                <div className="w-full h-full bg-gray-700 flex items-center justify-center">
-                  <span className="text-6xl">👨‍💻</span>
-                </div>
+                <img
+                  src="/Profile/Capture.PNG"
+                  alt="Profile Picture"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
               </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/20 rounded-full blur-xl"></div>
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-500/20 rounded-full blur-xl"></div>
@@ -28,7 +30,7 @@ const AboutSection = ({ isVisible, fadeInUp, fadeInLeft, fadeInRight }) => {
           
           <div className={fadeInRight('about')}>
               <h3 className="text-2xl font-bold mb-6 text-blue-400">
-                Passionate Developer with 5+ Years Experience
+                Passionate Programmer, Infra & Cyber Security
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 I&apos;m a full-stack developer who loves creating beautiful, functional web applications. 

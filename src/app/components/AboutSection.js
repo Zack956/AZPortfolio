@@ -27,19 +27,19 @@ const AboutSection = ({ isVisible, fadeInUp, fadeInLeft, fadeInRight }) => {
           </div>
           
           <div className={fadeInRight('about')}>
-            <h3 className="text-2xl font-bold mb-6 text-blue-400">
-              Passionate Developer with 5+ Years Experience
-            </h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              I'm a full-stack developer who loves creating beautiful, functional web applications. 
-              My journey in tech started with a curiosity about how things work, and it has evolved 
-              into a passion for crafting digital experiences that make a difference.
-            </p>
-            <p className="text-gray-300 mb-8 leading-relaxed">
-              I specialize in modern web technologies including React, Next.js, Node.js, and cloud 
-              platforms. When I'm not coding, you'll find me exploring new technologies, contributing 
-              to open source projects, or mentoring aspiring developers.
-            </p>
+              <h3 className="text-2xl font-bold mb-6 text-blue-400">
+                Passionate Developer with 5+ Years Experience
+              </h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                I&apos;m a full-stack developer who loves creating beautiful, functional web applications. 
+                My journey in tech started with a curiosity about how things work, and it has evolved 
+                into a passion for crafting digital experiences that make a difference.
+              </p>
+              <p className="text-gray-300 mb-8 leading-relaxed">
+                I specialize in modern web technologies including React, Next.js, Node.js, and cloud 
+                platforms. When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing 
+                to open source projects, or mentoring aspiring developers.
+              </p>
             
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-gray-900/50 p-4 rounded-lg border border-gray-700">

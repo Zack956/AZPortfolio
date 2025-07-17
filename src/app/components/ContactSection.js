@@ -50,14 +50,14 @@ const ContactSection = ({ isVisible, fadeInUp, fadeInLeft, fadeInRight }) => {
         
         <div className="grid md:grid-cols-2 gap-12">
           <div className={fadeInLeft('contact')}>
-            <h3 className="text-2xl font-bold mb-6 text-blue-400">
-              Let's Work Together
-            </h3>
-            <p className="text-gray-300 mb-8 leading-relaxed">
-              I'm always excited to work on new projects and collaborate with amazing people. 
-              Whether you have a project in mind or just want to chat about technology, 
-              feel free to reach out!
-            </p>
+              <h3 className="text-2xl font-bold mb-6 text-blue-400">
+                Let&apos;s Work Together
+              </h3>
+              <p className="text-gray-300 mb-8 leading-relaxed">
+                I&apos;m always excited to work on new projects and collaborate with amazing people. 
+                Whether you have a project in mind or just want to chat about technology, 
+                feel free to reach out!
+              </p>
             
             <div className="space-y-4">
               <a

@@ -72,7 +72,7 @@ const HeroSection = ({ isVisible, fadeInUp, scrollToSection }) => {
                 Get In Touch
               </button>
               <a
-                href="/AMIRZAKWANBINZABAHResume.pdf"
+                href="/CV/AMIRZAKWANBINZABAHResume.pdf"
                 download
                 className="border-2 border-green-500 px-8 py-3 rounded-full font-semibold text-green-500 hover:bg-green-500 hover:text-white transition-all duration-300"
               >

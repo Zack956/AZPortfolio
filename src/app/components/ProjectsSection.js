@@ -6,10 +6,11 @@ import { ExternalLink } from 'lucide-react';
 const ProjectsSection = ({ isVisible, fadeInUp, staggerChildren }) => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with Next.js, Stripe integration, and modern UI components.",
-      tech: ["Next.js", "TypeScript", "Stripe", "Tailwind"],
-      gradient: "from-blue-500 to-cyan-500"
+      title: "Purchase Requisition",
+      description: "A full-stack e-commerce solution built with PHP, Filament and modern UI components.",
+      tech: ["PHP", "TypeScript", "Filament", "Postgress"],
+      gradient: "from-blue-500 to-cyan-500",
+      image: "/Project/PR.PNG"
     },
     {
       title: "Task Management App",
@@ -40,7 +41,12 @@ const ProjectsSection = ({ isVisible, fadeInUp, staggerChildren }) => {
               key={index}
               className={`${staggerChildren('projects', index * 200)} group bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105`}
             >
-              <div className={`h-48 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
+              <div className={`h-48 relative overflow-hidden`}>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover rounded-t-2xl"
+                />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
                 <div className="absolute bottom-4 right-4">
                   <ExternalLink className="w-6 h-6 text-white/80 group-hover:text-white transition-colors duration-300" />

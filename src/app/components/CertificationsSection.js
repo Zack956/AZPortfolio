@@ -10,28 +10,27 @@ const CertificationsSection = ({ isVisible, fadeInUp, staggerChildren }) => {
     {
       title: "Microsoft Certified: Azure Security Engineer Associate",
       issuer: "Microsoft",
-      date: "Renew by September 20, 2025",
       badge: "🛡️",
+      CertNo: "168048-15EA94",
       image: "/cert/microsoft-certified-azure-security-engineer-associate.png"
     },
     {
       title: "Microsoft Certified: Azure Administrator Associate",
       issuer: "Microsoft",
-      date: "Expires on June 5, 2026",
       badge: "🔧",
+      CertNo: "119E1E-F3F784",
       image: "/cert/microsoft-certified-azure-administrator-associate.2.png"
     },
     {
       title: "Microsoft Certified: Azure Solutions Architect Expert",
       issuer: "Microsoft",
-      date: "Expires on August 14, 2026",
       badge: "🏗️",
+      CertNo: "23686E-9AV5DE",
       image: "/cert/microsoft-certified-azure-solutions-architect-expert.1.png"
     },
     {
       title: "CCNA Certification",
       issuer: "Cisco",
-      date: "Date not specified",
       badge: "🌐",
       image: "/cert/CCNA.jpg"
     }

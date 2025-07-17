@@ -61,7 +61,7 @@ const ContactSection = ({ isVisible, fadeInUp, fadeInLeft, fadeInRight }) => {
             
             <div className="space-y-4">
               <a
-                href="mailto:john.doe@example.com"
+                href="mailto:zack66789@gmail.com"
                 className="flex items-center space-x-4 hover:text-blue-400 transition-colors duration-300"
                 aria-label="Send email to John Doe"
               >

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Code, Palette } from 'lucide-react';
+import { Code, Palette, Server, SquareTerminal } from 'lucide-react';
 
 const AboutSection = ({ isVisible, fadeInUp, fadeInLeft, fadeInRight }) => {
   return (
@@ -20,7 +20,7 @@ const AboutSection = ({ isVisible, fadeInUp, fadeInLeft, fadeInRight }) => {
                 <img
                   src="/Profile/Capture.PNG"
                   alt="Profile Picture"
-                  className="w-full h-full object-cover rounded-2xl"
+                  className="w-full h-full object-cover rounded-2xl transition-transform duration-700 ease-in-out hover:scale-105 hover:shadow-lg"
                 />
               </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/20 rounded-full blur-xl"></div>
@@ -47,12 +47,22 @@ const AboutSection = ({ isVisible, fadeInUp, fadeInLeft, fadeInRight }) => {
               <div className="bg-gray-900/50 p-4 rounded-lg border border-gray-700">
                 <Code className="w-8 h-8 text-blue-400 mb-2" />
                 <h4 className="font-semibold mb-1">Frontend</h4>
-                <p className="text-sm text-gray-400">React, Next.js, TypeScript</p>
+                <p className="text-sm text-gray-400">React, Next.js, TypeScript, VB6</p>
               </div>
               <div className="bg-gray-900/50 p-4 rounded-lg border border-gray-700">
                 <Palette className="w-8 h-8 text-purple-400 mb-2" />
                 <h4 className="font-semibold mb-1">Design</h4>
                 <p className="text-sm text-gray-400">UI/UX, Figma, Tailwind</p>
+              </div>
+              <div className="bg-gray-900/50 p-4 rounded-lg border border-gray-700">
+                <Server className="w-8 h-8 text-purple-400 mb-2" />
+                <h4 className="font-semibold mb-1">Networking</h4>
+                <p className="text-sm text-gray-400">Cisco core switch, Access switch, Fortigate Firewall, Ruyjiee Cloud Access Point</p>
+              </div>
+              <div className="bg-gray-900/50 p-4 rounded-lg border border-gray-700">
+                <SquareTerminal className="w-8 h-8 text-purple-400 mb-2" />
+                <h4 className="font-semibold mb-1">Linux</h4>
+                <p className="text-sm text-gray-400">Linux system administration and scripting</p>
               </div>
             </div>
           </div>

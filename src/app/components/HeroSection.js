@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 const phrases = [
-  "Infra Expert",
+  "Infrastructure Engineer",
   "Self Learn Programmer",
   "Cyber Security Pentest"
 ];

@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 mb-4 md:mb-0">
-            © 2024 John Doe. All rights reserved.
+            © 2025 Amir Zakwan. All rights reserved.
           </div>
           <div className="flex space-x-6">
             <Github className="w-6 h-6 text-gray-400 hover:text-blue-400 transition-colors duration-300 cursor-pointer" />

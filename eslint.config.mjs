@@ -17,6 +17,10 @@ const eslintConfig = [
       "no-undef": "off",
     },
   },
+  {
+    files: ["**/*.css"],
+    processor: "postcss/postcss",
+  },
 ];
 
 export default eslintConfig;

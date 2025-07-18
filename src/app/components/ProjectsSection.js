@@ -16,7 +16,8 @@ const ProjectsSection = ({ isVisible, fadeInUp, staggerChildren }) => {
       title: "Task Management App",
       description: "Real-time collaborative task management with drag-and-drop functionality and team features.",
       tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-      gradient: "from-purple-500 to-pink-500"
+      gradient: "from-purple-500 to-pink-500",
+      image: "/Project/TaskManagement.png"
     },
     {
       title: "Weather Dashboard",
